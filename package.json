@@ -1,0 +1,21 @@
+{
+  "name": "live-remote-api",
+  "author": "Michael Hopfner",
+  "version": "1.0.0",
+  "description": "The browser part of m4l-ApiServer",
+  "license": "MIT",
+  "main": "target/remoteapi.js",
+  "typings": "target/typings.d.ts",
+  "scripts": {
+  	"test": "mocha"
+  },
+  "devDependencies": {
+		"gulp": "3.9.1",
+  		"gulp-add-src": "0.2.0",
+  		"gulp-concat": "2.6.0",
+  		"gulp-typescript": "2.13.6",
+  		"merge2": "1.0.2",
+  		"mocha": "3.0.2",
+  		"websocket": "1.0.23"
+	}
+}
