@@ -19,6 +19,8 @@
  * 
  */
 
+var ssplit = require("string-split-keep")
+
 
 var mess_id = 0
 
@@ -46,7 +48,7 @@ ws.onerror = function(e) {
 }
 
 ws.onmessage = function(e: MessageEvent) {
-	var data = splitKeepTrail(e.data, " ", 3);
+	var data = ssplit(e.data, " ", 3);
 	var id = parseInt(data[0])
 	var status = parseInt(data[1])
 	var message = data[2]
@@ -111,18 +113,5 @@ function callListener(l: ValueCallback, val: any, err_mess: string) {
 	} catch(e) {
 		console.error(err_mess, l, val, e)
 	}	
-}
-
-function splitKeepTrail(str: string, separator: string, limit: number) {
-	var ret = []
-	var cursor = 0
-	for(var x=1;x<limit;++x) {
-		var index = str.indexOf(separator, cursor)
-		if(index == -1) break
-		ret.push(str.slice(cursor, index))
-		cursor = index + 1
-	}
-	if(cursor != str.length) ret.push(str.slice(cursor))
-	return ret
 }
 

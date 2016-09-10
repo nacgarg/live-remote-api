@@ -17,5 +17,8 @@
   		"merge2": "1.0.2",
   		"mocha": "3.0.2",
   		"websocket": "1.0.23"
+	},
+	"dependencies": {
+		"string-split-keep": "1.0.0"
 	}
-}
+}	
