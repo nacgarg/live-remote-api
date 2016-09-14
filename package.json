@@ -9,6 +9,10 @@
   "scripts": {
   	"test": "mocha"
   },
+  "repository": {
+  	"type": "git",
+	"url": "https://github.com/mihop/live-remote-api.git"
+  },
   "devDependencies": {
 		"gulp": "3.9.1",
   		"gulp-add-src": "0.2.0",
